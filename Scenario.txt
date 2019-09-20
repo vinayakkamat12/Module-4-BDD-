@@ -1,0 +1,45 @@
+Feature : UserLogin
+Scenario : Successful Login
+Given : User is on Login Page
+When : User enters valid credentials
+Then : Display Successful Message
+
+ 
+
+Scenario : Login failure on wrong password
+Given : User is on Login Page
+When : User enters valid username
+But : User entered invalid password
+Then : Display Please enter valid password
+
+ 
+
+Scenario : Login failure on wrong username
+Given : User is on Login Page
+When : User enters valid password
+But : User entered invalid username
+Then : Display Please enter valid username
+
+ 
+
+Scenario : Login failure on empty credentials
+Given : User is on Login Page
+When : User clicks on login button
+But : User did not enter credentials
+Then : Display Please enter username and password
+
+
+
+Scenario : Login failure on forgot password
+Given : User is on Login Page
+When : User clicks on forgot password
+//But : User did not enter credentials
+Then : Display form containing new password and confirm password
+
+
+
+Scenario : Login failure on register new user
+Given : User is on Login Page
+When : User clicks on register new user
+//But : User did not enter credentials
+Then : Display form containing fields to fill username and password 
